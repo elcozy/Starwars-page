@@ -46,14 +46,14 @@ export default function People() {
               &gt;
             </button>
           </div>
-          <div class="search">
+          <div className="search">
             <input
               type="text"
-              class="searchTerm pl-3"
+              className="searchTerm pl-3"
               placeholder="Search for people"
             />
-            <button type="submit" class="searchButton">
-              <i class="fa fa-search"></i>
+            <button type="submit" className="searchButton">
+              <i className="fa fa-search"></i>
             </button>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function People() {
       <div className="col">
         <div className="table-card">
           <div className="" style={{ overflowX: "auto" }}>
-            <table class="table table-borderless table-hover">
+            <table className="table table-borderless table-hover">
               <thead>
                 <tr className="border-bottom">
                   <th scope="col">Name </th>

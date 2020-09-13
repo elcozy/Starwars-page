@@ -31,7 +31,7 @@ export default function Species(params) {
         <div className="container-fluid main mainspace back justify-content-center justify-content-md-between">
           <div className="cont">
             <Link
-              class="d-flex align-items-center
+              className="d-flex align-items-center
         "
               to="/dashboard"
             >
@@ -55,14 +55,14 @@ export default function Species(params) {
             </button>
           </div>
 
-          <div class="search">
+          <div className="search">
             <input
               type="text"
-              class="searchTerm pl-3"
+              className="searchTerm pl-3"
               placeholder="Search for species"
             />
-            <button type="submit" class="searchButton">
-              <i class="fa fa-search"></i>
+            <button type="submit" className="searchButton">
+              <i className="fa fa-search"></i>
             </button>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function Species(params) {
       <div className="col">
         <div className="table-card">
           <div className="" style={{ overflowX: "auto" }}>
-            <table class="table table-borderless table-hover">
+            <table className="table table-borderless table-hover">
               <thead>
                 <tr className="border-bottom">
                   <th scope="col"> </th>
@@ -89,14 +89,14 @@ export default function Species(params) {
                 {species.map((specie, i) => (
                   <tr key={i}>
                     <th scope="row">
-                      <div class="custom-control custom-checkbox">
+                      <div className="custom-control custom-checkbox">
                         <input
                           type="checkbox"
-                          class="custom-control-input"
+                          className="custom-control-input"
                           id={`customCheck${i}`}
                         />
                         <label
-                          class="custom-control-label"
+                          className="custom-control-label"
                           for={`customCheck${i}`}
                         ></label>
                       </div>

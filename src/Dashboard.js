@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const [films, setFilms] = useState([]);
@@ -45,9 +46,9 @@ export default function Dashboard() {
     <div>
       <div className="sub-main">
         <div className="container-fluid main maindash back">
-          <div class="form-group mr-3 my-auto">
+          <div className="form-group mr-3 my-auto">
             <select
-              class="form-control pr-5 select"
+              className="form-control pr-5 select"
               id="exampleFormControlSelect1"
             >
               <option>Current Year</option>
@@ -57,9 +58,9 @@ export default function Dashboard() {
               <option>5</option>
             </select>
           </div>
-          <div class="form-group my-auto">
+          <div className="form-group my-auto">
             <select
-              class="form-control pr-5 select"
+              className="form-control pr-5 select"
               id="exampleFormControlSelect1"
             >
               <option>Current Year</option>
@@ -72,103 +73,114 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="container-fluid dashboard">
-        <div className=""></div>
         <div className="card-container">
           <div className="col-6 col-md-6 col-lg-4 col-xl  wrapper-card">
-            <div className="card-single">
-              <div className="main">
-                <span className="name mb-2 mb-md-0">Films</span>
-                <span className="icon">
-                  <div className="pics">
-                    <object alt="" data="./video-camera (1).svg" />
-                  </div>
-                </span>
+            <Link to="/films">
+              {" "}
+              <div className="card-single">
+                <div className="main">
+                  <span className="name mb-2 mb-md-0">Films</span>
+                  <span className="icon">
+                    <div className="pics">
+                      <object alt="" data="./video-camera (1).svg" />
+                    </div>
+                  </span>
+                </div>
+                <h5 className="number">{filmsCount}</h5>
+                <h5 className="stats">
+                  &#8593; {Math.floor(filmsCount / 4)}&nbsp;
+                  <span className="">More than yesterday</span>
+                </h5>
               </div>
-              <h5 className="number">{filmsCount}</h5>
-              <h5 className="stats">
-                &#8593; {Math.floor(filmsCount / 4)}&nbsp;
-                <span className="">More than yesterday</span>
-              </h5>
-            </div>
+            </Link>
           </div>
 
           <div className="col-6 col-md-6 col-lg-4 col-xl  wrapper-card">
-            <div className="card-single">
-              <div className="main">
-                <span className="name mb-2 mb-md-0">Starships</span>
-                <span className="icon">
-                  <div className="pics star">
-                    <object alt="" data="./ufo.svg" />
-                  </div>
-                </span>
+            <Link to="/starships">
+              {" "}
+              <div className="card-single">
+                <div className="main">
+                  <span className="name mb-2 mb-md-0">Starships</span>
+                  <span className="icon">
+                    <div className="pics star">
+                      <object alt="" data="./ufo.svg" />
+                    </div>
+                  </span>
+                </div>
+                <h5 className="number">{starshipCount}</h5>
+                <h5 className="stats">
+                  &#8593; {Math.floor(starshipCount / 3)}&nbsp;
+                  <span className="">More than yesterday</span>
+                </h5>
               </div>
-              <h5 className="number">{starshipCount}</h5>
-              <h5 className="stats">
-                &#8593; {Math.floor(starshipCount / 3)}&nbsp;
-                <span className="">More than yesterday</span>
-              </h5>
-            </div>
+            </Link>
           </div>
 
           <div className="col-6 col-md-6 col-lg-4 col-xl  wrapper-card">
-            <div className="card-single">
-              <div className="main">
-                <span className="name mb-2 mb-md-0">People</span>
-                <span className="icon">
-                  <div className="pics peop">
-                    <object alt="" data="./group-of-students.svg" />
-                  </div>
-                </span>
+            <Link to="/people">
+              <div className="card-single">
+                <div className="main">
+                  <span className="name mb-2 mb-md-0">People</span>
+                  <span className="icon">
+                    <div className="pics peop">
+                      <object alt="" data="./group-of-students.svg" />
+                    </div>
+                  </span>
+                </div>
+                <h5 className="number">{peopleCount}</h5>
+                <h5 className="stats">
+                  &#8593; {Math.floor(peopleCount / 5)}&nbsp;
+                  <span className="">More than yesterday</span>
+                </h5>
               </div>
-              <h5 className="number">{peopleCount}</h5>
-              <h5 className="stats">
-                &#8593; {Math.floor(peopleCount / 5)}&nbsp;
-                <span className="">More than yesterday</span>
-              </h5>
-            </div>
+            </Link>
           </div>
 
           <div className="col-6 col-md-6 col-lg-4 col-xl  wrapper-card">
-            <div className="card-single">
-              <div className="main">
-                <span className="name mb-2 mb-md-0">Vehicles</span>
-                <span className="icon">
-                  <div className="pics vehi">
-                    <object alt="" data="./taxi.svg" />
-                  </div>
-                </span>
+            <Link to="/vehicles">
+              {" "}
+              <div className="card-single">
+                <div className="main">
+                  <span className="name mb-2 mb-md-0">Vehicles</span>
+                  <span className="icon">
+                    <div className="pics vehi">
+                      <object alt="" data="./taxi.svg" />
+                    </div>
+                  </span>
+                </div>
+                <h5 className="number">{vehiclesCount}</h5>
+                <h5 className="stats">
+                  &#8593; {Math.floor(vehiclesCount / 3)}&nbsp;
+                  <span className="">More than yesterday</span>
+                </h5>
               </div>
-              <h5 className="number">{vehiclesCount}</h5>
-              <h5 className="stats">
-                &#8593; {Math.floor(vehiclesCount / 3)}&nbsp;
-                <span className="">More than yesterday</span>
-              </h5>
-            </div>
+            </Link>
           </div>
-
           <div className="col-6 col-md-6 col-lg-4 col-xl  wrapper-card">
-            <div className="card-single">
-              <div className="main">
-                <span className="name mb-2 mb-md-0">Species</span>
-                <span className="icon">
-                  <div className="pics spec">
-                    <object alt="" data="./phylogenetics.svg" />
-                  </div>
-                </span>
+            <Link to="/species">
+              <div className="card-single">
+                <div className="main">
+                  <span className="name mb-2 mb-md-0">Species</span>
+                  <span className="icon">
+                    <div className="pics spec">
+                      <object alt="" data="./phylogenetics.svg" />
+                    </div>
+                  </span>
+                </div>
+                <h5 className="number">{speciesCount}</h5>
+                <h5 className="stats">
+                  &#8593; {Math.floor(speciesCount / 4)}&nbsp;
+                  <span className="">More than yesterday</span>
+                </h5>
               </div>
-              <h5 className="number">{speciesCount}</h5>
-              <h5 className="stats">
-                &#8593; {Math.floor(speciesCount / 4)}&nbsp;
-                <span className="">More than yesterday</span>
-              </h5>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="col">
           <div className="table-card">
             <h5 className="col">Films</h5>
             <div className="" style={{ overflowX: "auto" }}>
-              <table class="table table-borderless">
+              <table className="table table-borderless">
                 <thead>
                   <tr>
                     <th scope="col">Film Title</th>
