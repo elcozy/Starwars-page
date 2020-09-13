@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
-export default function SignIn(params) {
+export default function SignIn() {
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
   const [isEmailValid, setEmailValid] = useState(false);
@@ -23,14 +23,14 @@ export default function SignIn(params) {
   return (
     <div className="signin">
       <div className="content  flex-column flex-md-row">
-        <div className="welcome col-12 col-md-6">
+        <div className="welcome col-12 col-md-4">
           <div className="context mx-auto">
             <span>Welcome to Star Wars</span>
             <span> the Clone Wars</span>
           </div>
           <div className="image mx-auto">{/* <StarWars /> */}</div>
         </div>
-        <div className="form py-5 py-md-0 col-12 col-md-6">
+        <div className="form py-5 py-md-0 col-12 col-md-8">
           <div className="formm container my-auto">
             <h5>Sign in to continue to your account.</h5>
             <form>
