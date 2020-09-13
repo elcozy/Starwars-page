@@ -1,0 +1,112 @@
+@import "navbar-fixed";
+
+.app {
+  @include media-breakpoint-up($navbar-sidebar-breakpoint) {
+    margin-left: $navbar-sidebar-width;
+  }
+}
+.fixed-left {
+  top: -70px; /* you'll have to figure out the exact number here */
+}
+
+.fixed-left {
+  position: relative !important; /* this can also be static */
+}
+.navbar {
+  &.fixed-left {
+    background: white;
+    border: 0.4000000059604645px solid #dbe3ee;
+    opacity: 1;
+    @include navbar-sidebar;
+    .navbar-brand {
+      width: 20%;
+    }
+    .navbar-nav {
+      * {
+        text-decoration: none !important;
+      }
+
+      .active-link {
+        .nav-item {
+          display: flex;
+          justify-content: space-between;
+
+          &:after {
+            content: "";
+            border-right: 3px solid #fddb00;
+            // position: absolute;
+            margin-right: -19px;
+            right: 0;
+          }
+          .nav-link-image {
+            display: flex;
+            justify-content: center;
+            background: #fffff0 !important;
+          }
+          svg {
+            height: 100%;
+            path {
+              fill: #fddb00 !important;
+            }
+          }
+
+          .text {
+            color: #000;
+          }
+        }
+      }
+    }
+    .nav-item {
+      &:hover {
+        .nav-link-image {
+          background: #fffff0 !important;
+        }
+        * {
+          color: #fddb00 !important;
+          fill: #fddb00 !important;
+        }
+      }
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+
+      .nav-link-image {
+        display: flex;
+        justify-content: center;
+        background: #f2f2f2;
+
+        padding: 5px;
+        height: 28px;
+        border-radius: 1px;
+        width: 28px;
+        // padding: 0 !important;
+        svg {
+          color: red;
+          height: 100%;
+          path {
+            fill: #a3abb7;
+          }
+        }
+      }
+      .text {
+        font-size: 16px;
+        font-weight: 500;
+        color: #a3abb7;
+      }
+    }
+    @include media-breakpoint-up($navbar-sidebar-breakpoint) {
+      position: fixed !important;
+      right: auto;
+      padding-top: 15px;
+      .navbar-brand {
+        width: 78%;
+        img {
+          width: 100%;
+        }
+      }
+      .navbar-collapse {
+        margin: 2rem 0;
+      }
+    }
+  }
+}

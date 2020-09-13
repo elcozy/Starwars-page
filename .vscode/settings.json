@@ -1,0 +1,12 @@
+{
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#000000c5",
+    "editor.selectionBackground": "#da6110c5",
+    "editor.findMatchBackground": "#00cc44a8",
+    "editor.findMatchHighlightBackground": "#ff7b0048",
+    "activityBar.background": "#5F022D",
+    "titleBar.activeBackground": "#85033F",
+    "titleBar.activeForeground": "#FFFBFD"
+  },
+  "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe"
+}
