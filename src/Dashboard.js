@@ -77,7 +77,7 @@ export default function Dashboard() {
           <div className="col-6 col-md-6 col-lg-4 col-xl  wrapper-card">
             <div className="card-single">
               <div className="main">
-                <span className="name">Films</span>
+                <span className="name mb-2 mb-md-0">Films</span>
                 <span className="icon">
                   <div className="pics">
                     <object alt="" data="./video-camera (1).svg" />
@@ -95,7 +95,7 @@ export default function Dashboard() {
           <div className="col-6 col-md-6 col-lg-4 col-xl  wrapper-card">
             <div className="card-single">
               <div className="main">
-                <span className="name">Starships</span>
+                <span className="name mb-2 mb-md-0">Starships</span>
                 <span className="icon">
                   <div className="pics star">
                     <object alt="" data="./ufo.svg" />
@@ -113,7 +113,7 @@ export default function Dashboard() {
           <div className="col-6 col-md-6 col-lg-4 col-xl  wrapper-card">
             <div className="card-single">
               <div className="main">
-                <span className="name">People</span>
+                <span className="name mb-2 mb-md-0">People</span>
                 <span className="icon">
                   <div className="pics peop">
                     <object alt="" data="./group-of-students.svg" />
@@ -131,7 +131,7 @@ export default function Dashboard() {
           <div className="col-6 col-md-6 col-lg-4 col-xl  wrapper-card">
             <div className="card-single">
               <div className="main">
-                <span className="name">Vehicles</span>
+                <span className="name mb-2 mb-md-0">Vehicles</span>
                 <span className="icon">
                   <div className="pics vehi">
                     <object alt="" data="./taxi.svg" />
@@ -149,7 +149,7 @@ export default function Dashboard() {
           <div className="col-6 col-md-6 col-lg-4 col-xl  wrapper-card">
             <div className="card-single">
               <div className="main">
-                <span className="name">Species</span>
+                <span className="name mb-2 mb-md-0">Species</span>
                 <span className="icon">
                   <div className="pics spec">
                     <object alt="" data="./phylogenetics.svg" />

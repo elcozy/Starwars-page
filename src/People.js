@@ -27,7 +27,7 @@ export default function People() {
   return (
     <div className="people">
       <div className="sub-main">
-        <div className="container-fluid main mainspace back">
+        <div className="container-fluid main mainspace back justify-content-center justify-content-md-between">
           <div className="cont">
             <h5>{total} Total</h5>
             <h5>

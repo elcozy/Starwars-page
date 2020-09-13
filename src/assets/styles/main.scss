@@ -24,6 +24,8 @@ table {
 }
 body {
   font-family: "Poppins", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
 }
 .signin {
   .content {
@@ -219,6 +221,7 @@ body {
   .main {
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
   }
   .back {
     h3 {
@@ -342,6 +345,7 @@ body {
       .main {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin-bottom: 61px;
         .icon {
         }

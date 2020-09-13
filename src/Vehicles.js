@@ -28,7 +28,7 @@ export default function Vehicles() {
   return (
     <div className="vehicles">
       <div className="sub-main">
-        <div className="container-fluid main mainspace back">
+        <div className="container-fluid main mainspace back justify-content-center justify-content-md-between">
           <div className="cont">
             <Link
               class="d-flex align-items-center
@@ -92,11 +92,11 @@ export default function Vehicles() {
                         <input
                           type="checkbox"
                           class="custom-control-input"
-                          id="customCheck1"
+                          id={`customCheck${i}`}
                         />
                         <label
                           class="custom-control-label"
-                          for="customCheck1"
+                          for={`customCheck${i}`}
                         ></label>
                       </div>
                     </th>
