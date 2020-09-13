@@ -27,7 +27,7 @@ export default class App extends React.Component {
             path="*"
             render={() => (
               <div className="w-100 h-100 d-flex justify-content-center align-items-center">
-                Not found{" "}
+                Not found
               </div>
             )}
           ></Route>

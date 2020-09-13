@@ -1,20 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import StarWars from "./assets/img/undraw_To_the_stars_qhyy.svg";
 import { Link } from "react-router-dom";
 
 export default function SignIn(params) {
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
-  const onEmailInput = (e) => {
-    e.preventDefault();
-    //set input vlaue to search input.
-    setEmailValue(e.target.value);
-  };
-  const onPAsswordInput = (e) => {
-    e.preventDefault();
-    //set input vlaue to search input.
-    setPasswordValue(e.target.value);
-  };
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  useEffect(() => {});
   return (
     <div className="signin">
       <div className="content  flex-column flex-md-row">
@@ -34,7 +27,7 @@ export default function SignIn(params) {
                 <input
                   type="email"
                   class="form-control"
-                  onChange={onEmailInput}
+                  onChange={(e) => setEmailValue(e.target.value)}
                   aria-describedby="emailHelp"
                   placeholder="Email address"
                 />
@@ -43,7 +36,7 @@ export default function SignIn(params) {
                 <label for="exampleInputPassword1">Password</label>
                 <input
                   type="password"
-                  onChange={onPAsswordInput}
+                  onChange={(e) => setPasswordValue(e.target.value)}
                   class="form-control"
                   placeholder="Enter strong password"
                 />
@@ -54,6 +47,7 @@ export default function SignIn(params) {
                   component={Link}
                   to="/dashboard"
                   type="submit"
+                  disabled={isDisabled}
                   class="btn btn-primary"
                 >
                   Submit
