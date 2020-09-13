@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function People() {
   const [peoples, setPeoples] = useState([]);
@@ -82,7 +81,7 @@ export default function People() {
                     <td>
                       <div>
                         <div className="img">
-                          <object data="./images.jpeg" />
+                          <object alt="" data="./images.jpeg" />
                         </div>
                         <span>{people.name}</span>
                       </div>

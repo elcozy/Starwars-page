@@ -80,7 +80,7 @@ export default function Dashboard() {
                 <span className="name">Films</span>
                 <span className="icon">
                   <div className="pics">
-                    <object data="./video-camera (1).svg" />
+                    <object alt="" data="./video-camera (1).svg" />
                   </div>
                 </span>
               </div>
@@ -98,7 +98,7 @@ export default function Dashboard() {
                 <span className="name">Starships</span>
                 <span className="icon">
                   <div className="pics star">
-                    <object data="./ufo.svg" />
+                    <object alt="" data="./ufo.svg" />
                   </div>
                 </span>
               </div>
@@ -116,7 +116,7 @@ export default function Dashboard() {
                 <span className="name">People</span>
                 <span className="icon">
                   <div className="pics peop">
-                    <object data="./group-of-students.svg" />
+                    <object alt="" data="./group-of-students.svg" />
                   </div>
                 </span>
               </div>
@@ -134,7 +134,7 @@ export default function Dashboard() {
                 <span className="name">Vehicles</span>
                 <span className="icon">
                   <div className="pics vehi">
-                    <object data="./taxi.svg" />
+                    <object alt="" data="./taxi.svg" />
                   </div>
                 </span>
               </div>
@@ -152,7 +152,7 @@ export default function Dashboard() {
                 <span className="name">Species</span>
                 <span className="icon">
                   <div className="pics spec">
-                    <object data="./phylogenetics.svg" />
+                    <object alt="" data="./phylogenetics.svg" />
                   </div>
                 </span>
               </div>
@@ -185,7 +185,7 @@ export default function Dashboard() {
                       <td>
                         <div>
                           <div className="pics">
-                            <object data="./video-camera (1).svg" />
+                            <object alt="" data="./video-camera (1).svg" />
                           </div>
                           <span>{film.title}</span>
                         </div>
@@ -193,7 +193,7 @@ export default function Dashboard() {
                       <td>
                         <div>
                           <div className="img">
-                            <object data="./images.jpeg" />
+                            <object alt="" data="./images.jpeg" />
                           </div>
                           <span>{film.director}</span>
                         </div>
@@ -201,7 +201,7 @@ export default function Dashboard() {
                       <td>
                         <div>
                           <div className="img">
-                            <object data="./images.jpeg" />
+                            <object alt="" data="./images.jpeg" />
                           </div>
                           <span>{film.producer}</span>
                         </div>

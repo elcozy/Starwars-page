@@ -1,12 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import SignIn from "./SignIn";
-import Allpages from "./AllPages";
-// import Species from "./Species";
-// import Starships from "./Starships";
-// import Vehicles from "./Vehicles";
-// import People from "./People";
-// import Dashboard from "./Dashboard";
-import Navbar from "./Navbar";
 import "./assets/styles/main.scss";
 import { Switch, Route, Redirect } from "react-router-dom";
 import AllPages from "./AllPages";

@@ -51,7 +51,7 @@ export default function Navbar(params) {
               <li class="nav-item w-100">
                 <div className="d-flex">
                   <span className=" nav-link-image">
-                    {/* <object
+                    {/* <object alt=""
                       data="/dashboard.svg"
                       width={"100%"}
                       class="d-inline-block img-fluid"
@@ -96,7 +96,7 @@ export default function Navbar(params) {
               <li class="nav-item w-100">
                 <div className="d-flex">
                   <span className="  nav-link-image">
-                    {/* <object
+                    {/* <object alt=""
                       data="/building.svg"
                       width={"100%"}
                       class="d-inline-block img-fluid"
@@ -129,7 +129,7 @@ export default function Navbar(params) {
               <li class="nav-item w-100">
                 <div className="d-flex">
                   <span className="  nav-link-image">
-                    {/* <object
+                    {/* <object alt=""
                       data="/people.svg "
                       width={"100%"}
                       class="d-inline-block img-fluid"
@@ -165,7 +165,7 @@ export default function Navbar(params) {
               <li class="nav-item w-100">
                 <div className="d-flex">
                   <span className="  nav-link-image">
-                    {/* <object
+                    {/* <object alt=""
                       data="/vehicles.svg"
                       width={"100%"}
                       class="d-inline-block img-fluid"
@@ -197,7 +197,7 @@ export default function Navbar(params) {
               <li class="nav-item w-100">
                 <div className="d-flex">
                   <span className="  nav-link-image">
-                    {/* <object
+                    {/* <object alt=""
                       data="/species.svg "
                       width={"100%"}
                       class="d-inline-block img-fluid"
@@ -271,7 +271,7 @@ export default function Navbar(params) {
               <i class="far fa-2x fa-comments"></i>
             </span>
             <div className="image">
-              <img src="/images.png" />
+              <img src="/images.png" alt="" />
             </div>
           </div>
         </div>
