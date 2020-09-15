@@ -71,7 +71,7 @@ export default function SignIn() {
                     passwordValue ? `${isPasswordValid ? "" : "d-block"}` : ""
                   }`}
                 >
-                  Password must container an uppercase, lower case, number and
+                  Password must contain an uppercase, lower case, number and
                   symbol.
                 </div>
               </div>
