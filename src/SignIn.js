@@ -85,6 +85,9 @@ export default function SignIn() {
                 Submit
               </button>
             </form>
+            <div class="invalid-feedback d-block">
+              input any email and random password to continue
+            </div>
           </div>
         </div>
       </div>

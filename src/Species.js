@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { speciesB } from "./backupData";
 
 export default function Species(params) {
   const [species, setSpecies] = useState([]);
@@ -23,6 +24,11 @@ export default function Species(params) {
         const range = (page - 1) * 10 + 1;
         setRange(`${range} - ${range + specie.results.length}`);
         setLoading(false);
+      })
+      .catch((error) => {
+        setSpecies(speciesB);
+        setTotal(37);
+        console.error("Error:", error);
       });
   }, [page]);
   return (

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { vehiclesB } from "./backupData";
 
 export default function Vehicles() {
   const [vehicles, setVehicles] = useState([]);
@@ -23,6 +24,11 @@ export default function Vehicles() {
         const range = (page - 1) * 10 + 1;
         setRange(`${range} - ${range + vehicle.results.length}`);
         setLoading(false);
+      })
+      .catch((error) => {
+        setVehicles(vehiclesB);
+        setTotal(39);
+        console.error("Error:", error);
       });
   }, [page]);
   return (

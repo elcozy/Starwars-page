@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { starshipsB } from "./backupData";
 
 export default function Starships() {
   const [starships, setStarships] = useState([]);
@@ -23,6 +24,11 @@ export default function Starships() {
         const range = (page - 1) * 10 + 1;
         setRange(`${range} - ${range + starship.results.length}`);
         setLoading(false);
+      })
+      .catch((error) => {
+        setStarships(starshipsB);
+        setTotal(36);
+        console.error("Error:", error);
       });
   }, [page]);
   return (

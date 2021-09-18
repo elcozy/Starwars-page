@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { filmsB } from "./backupData";
 
 export default function Dashboard() {
   const [films, setFilms] = useState([]);
@@ -19,26 +20,43 @@ export default function Dashboard() {
       .then((response) => response.json())
       .then((film) => {
         setFilmsCount(film.count);
-
+        console.log(film.results);
         setFilms(film.results);
+      })
+      .catch((error) => {
+        setFilms(filmsB);
+        setFilms(6);
+        console.error("Error:", error);
       });
     fetch(url_starship)
       .then((response) => response.json())
-      .then((starship) => setStarshipCount(starship.count));
+      .then((starship) => setStarshipCount(starship.count))
+      .catch((error) => {
+        console.error("Error:", error);
+      });
     fetch(url_vehicles)
       .then((response) => response.json())
       .then((vehicles) => {
         setVehiclesCount(vehicles.count);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
       });
     fetch(url_people)
       .then((response) => response.json())
       .then((people) => {
         SetPeopleCount(people.count);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
       });
     fetch(url_species)
       .then((response) => response.json())
       .then((species) => {
         setSpeciesCount(species.count);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
       });
   }, []);
 
@@ -82,7 +100,9 @@ export default function Dashboard() {
                   <span className="name mb-2 mb-md-0">Films</span>
                   <span className="icon">
                     <div className="pics">
-                      <object alt="" data="./video-camera (1).svg" />
+                      <object alt="" data="./video-camera (1).svg">
+                        Video Camera
+                      </object>
                     </div>
                   </span>
                 </div>
@@ -103,7 +123,9 @@ export default function Dashboard() {
                   <span className="name mb-2 mb-md-0">Starships</span>
                   <span className="icon">
                     <div className="pics star">
-                      <object alt="" data="./ufo.svg" />
+                      <object alt="" data="./ufo.svg">
+                        Ufo
+                      </object>
                     </div>
                   </span>
                 </div>
@@ -123,7 +145,9 @@ export default function Dashboard() {
                   <span className="name mb-2 mb-md-0">People</span>
                   <span className="icon">
                     <div className="pics peop">
-                      <object alt="" data="./group-of-students.svg" />
+                      <object alt="" data="./group-of-students.svg">
+                        Group of students
+                      </object>
                     </div>
                   </span>
                 </div>
@@ -144,7 +168,9 @@ export default function Dashboard() {
                   <span className="name mb-2 mb-md-0">Vehicles</span>
                   <span className="icon">
                     <div className="pics vehi">
-                      <object alt="" data="./taxi.svg" />
+                      <object alt="" data="./taxi.svg">
+                        Taxi
+                      </object>
                     </div>
                   </span>
                 </div>
@@ -163,7 +189,9 @@ export default function Dashboard() {
                   <span className="name mb-2 mb-md-0">Species</span>
                   <span className="icon">
                     <div className="pics spec">
-                      <object alt="" data="./phylogenetics.svg" />
+                      <object alt="" data="./phylogenetics.svg">
+                        phylogenetics
+                      </object>
                     </div>
                   </span>
                 </div>
@@ -197,7 +225,9 @@ export default function Dashboard() {
                       <td>
                         <div>
                           <div className="pics">
-                            <object alt="" data="./video-camera (1).svg" />
+                            <object alt="" data="./video-camera (1).svg">
+                              Video Camera
+                            </object>
                           </div>
                           <span>{film.title}</span>
                         </div>
@@ -205,7 +235,9 @@ export default function Dashboard() {
                       <td>
                         <div>
                           <div className="img">
-                            <object alt="" data="./images.jpeg" />
+                            <object alt="" data="./images.jpeg">
+                              Images
+                            </object>
                           </div>
                           <span>{film.director}</span>
                         </div>
@@ -213,7 +245,9 @@ export default function Dashboard() {
                       <td>
                         <div>
                           <div className="img">
-                            <object alt="" data="./images.jpeg" />
+                            <object alt="" data="./images.jpeg">
+                              IMages
+                            </object>
                           </div>
                           <span>{film.producer}</span>
                         </div>

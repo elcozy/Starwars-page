@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { peopleB } from "./backupData";
 
 export default function People() {
   const [peoples, setPeoples] = useState([]);
@@ -22,6 +23,11 @@ export default function People() {
         const range = (page - 1) * 10 + 1;
         setRange(`${range} - ${range + people.results.length}`);
         setLoading(false);
+      })
+      .catch((error) => {
+        setPeoples(peopleB);
+        setTotal(82);
+        console.error("Error:", error);
       });
   }, [page]);
   return (
@@ -81,7 +87,9 @@ export default function People() {
                     <td>
                       <div>
                         <div className="img">
-                          <object alt="" data="./images.jpeg" />
+                          <object alt="imagesB" data="./images.jpeg">
+                            image
+                          </object>
                         </div>
                         <span>{people.name}</span>
                       </div>
